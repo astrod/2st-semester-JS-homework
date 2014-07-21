@@ -4,6 +4,7 @@ function nextMan(name, age) {
 }
 
 function RecoverPeople(name, age) {
+        //여기서의 this는 아래처럼 new 키워드로 호출할 때 RecoverPeople를 가리킨다고 할 수 있죠.
 	nextMan.call(this, name, age); //이 함수에서의  this 는 RecoverPeople을 가리킵니다.
 }
 RecoverPeople.prototype = new nextMan();
